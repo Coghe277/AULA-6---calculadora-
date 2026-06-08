@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+        #numero { font-size: 5rem; margin-bottom: 20px; transition: color 0.3s; }
+        button { padding: 10px 20px; font-size: 1.2rem; margin: 5px; cursor: pointer; border-radius: 5px; border: 1px solid #ccc; }
+        button:hover { background-color: #f0f0f0; }
+        /* Classes para o bônus de cores */
+        .positivo { color: green; }
+        .negativo { color: red; }
+        .neutro { color: black; }
+    </style>
+</head>
+<body>
+
+    <!-- Elemento que exibe o número -->
+    <h1 id="numero" class="neutro">0</h1>
+
+    <!-- Botões de controle -->
+    <button id="btnDecrementar">Decrementar</button>
+    <button id="btnZerar">Zerar</button>
+    <button id="btnIncrementar">Incrementar</button>
+
+    <!-- Vínculo com o arquivo JavaScript -->
+    <script src="contador.js"></script>
+</body>
+</html>

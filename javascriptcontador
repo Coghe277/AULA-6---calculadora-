@@ -1,0 +1,40 @@
+// Inicializa a variável do contador
+let contador = 0;
+
+// Seleciona os elementos do HTML pelo ID
+const numeroHTML = document.getElementById("numero");
+const btnIncrementar = document.getElementById("btnIncrementar");
+const btnDecrementar = document.getElementById("btnDecrementar");
+const btnZerar = document.getElementById("btnZerar");
+
+// Função responsável por atualizar a tela e mudar as cores (Bônus)
+function atualizarTela() {
+    numeroHTML.textContent = contador;
+
+    // Lógica das cores do bônus
+    if (contador > 0) {
+        numeroHTML.className = "positivo";
+    } else if (contador < 0) {
+        numeroHTML.className = "negativo";
+    } else {
+        numeroHTML.className = "neutro";
+    }
+}
+
+// Evento para o botão Incrementar
+btnIncrementar.addEventListener("click", function() {
+    contador++;
+    atualizarTela();
+});
+
+// Evento para o botão Decrementar
+btnDecrementar.addEventListener("click", function() {
+    contador--;
+    atualizarTela();
+});
+
+// Evento para o botão Zerar
+btnZerar.addEventListener("click", function() {
+    contador = 0;
+    atualizarTela();
+});
